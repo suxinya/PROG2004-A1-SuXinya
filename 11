@@ -1,0 +1,16 @@
+import java.util.Queue;
+public interface RideInterface {
+    // 1. Part3 等待队列相关方法
+    boolean addVisitorToQueue(Visitor visitor); // 添加游客到队列（返回是否成功）
+    Visitor removeVisitorFromQueue();           // 从队列移除游客（返回移除的游客）
+    void printQueue();                          // 打印队列所有游客
+
+    // 2. Part4A 乘坐记录相关方法
+    boolean addVisitorToHistory(Visitor visitor); // 添加游客到乘坐记录
+    boolean checkVisitorFromHistory(Visitor visitor); // 检查游客是否在记录中
+    int numberOfVisitors(); // 返回乘坐记录中的游客数量
+    void printRideHistory(); // 打印乘坐记录（需用Iterator）
+
+    // 3. Part5 运行周期相关方法
+    void runOneCycle(); // 运行一次设施周期
+}
